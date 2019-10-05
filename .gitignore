@@ -1,0 +1,3 @@
+venv
+app/training_data/out_jpgs/*
+app/training_data/raw_jpgs/*
