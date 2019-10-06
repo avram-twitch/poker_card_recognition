@@ -143,8 +143,8 @@ handNameList = ["Royal Flush", "Straight Flush", "Four Of A Kind", "Full House",
 handRankProbabilityList = [0.000154, 0.00139, 0.0240, 0.1441, 0.1965, 0.3925, 2.1128, 4.7539, 42.2569, 50.1177]
 
 #Read the cards in from the input file.
-file = open("pokerHand.txt", "r")
-fileLine = file.readline()
+file1 = open("pokerHand.txt", "r")
+fileLine = file1.readline()
 card1 = CreateCardFromText(fileLine)
 fileLine = file.readline()
 card2 = CreateCardFromText(fileLine)
