@@ -17,26 +17,26 @@ for i in range(5):
     cardRank = raw_input("What is this card's rank? ")
     
     #Accounts for text input for the rank
-    if(cardRank == "Jack"):
+    if(cardRank == "Jack" or cardRank == "jack" or cardRank == "J" or cardRank == "j"):
         cardRank = 11
-    elif(cardRank == "Queen"):
+    elif(cardRank == "Queen" or cardRank == "queen" or cardRank == "Q" or cardRank == "q"):
         cardRank = 12
-    elif(cardRank == "King"):
+    elif(cardRank == "King" or cardRank == "king" or cardRank == "K" or cardRank == "k"):
         cardRank = 13
-    elif(cardRank == "Ace"):
+    elif(cardRank == "Ace" or cardRank == "ace" or cardRank == "A" or cardRank == "a"):
         cardRank = 14
         
     
     cardSuit = raw_input("What is this card's suit? ")
     
     #Accounts for text input for the suit
-    if(cardSuit == "Hearts"):
+    if(cardSuit == "Hearts" or cardSuit == "hearts" or cardSuit == "H" or cardSuit == "h"):
         cardSuit = 0
-    elif(cardSuit == "Spades"):
+    elif(cardSuit == "Spades" or cardSuit == "spades" or cardSuit == "S" or cardSuit == "s"):
         cardSuit = 1
-    elif(cardSuit == "Diamonds"):
+    elif(cardSuit == "Diamonds" or cardSuit == "diamonds" or cardSuit == "D" or cardSuit == "d"):
         cardSuit = 2
-    elif(cardSuit == "Clubs"):
+    elif(cardSuit == "Clubs" or cardSuit == "clubs" or cardSuit == "C" or cardSuit == "c"):
         cardSuit = 3
     
     inputString = str(cardRank)+","+str(cardSuit)
