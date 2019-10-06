@@ -15,7 +15,30 @@ f = open(fileName, "w")
 for i in range(5):
     print("Creating card " + str(i+1))
     cardRank = raw_input("What is this card's rank? ")
-    cardSuit = raw_input("what is this card's suit? ")
+    
+    #Accounts for text input for the rank
+    if(cardRank == "Jack"):
+        cardRank = 11
+    elif(cardRank == "Queen"):
+        cardRank = 12
+    elif(cardRank == "King"):
+        cardRank = 13
+    elif(cardRank == "Ace"):
+        cardRank = 14
+        
+    
+    cardSuit = raw_input("What is this card's suit? ")
+    
+    #Accounts for text input for the suit
+    if(cardSuit == "Hearts"):
+        cardSuit = 0
+    elif(cardSuit == "Spades"):
+        cardSuit = 1
+    elif(cardSuit == "Diamonds"):
+        cardSuit = 2
+    elif(cardSuit == "Clubs"):
+        cardSuit = 3
+    
     inputString = str(cardRank)+","+str(cardSuit)
     f.write(inputString + "\n")
     
