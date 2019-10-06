@@ -1,7 +1,7 @@
 # handIdentifier
 # Evan Parry
 # October 5, 2019
-# Last updated October 5, 2019
+# Last updated October 6, 2019
 # Designed for HackTheU Hackathon
 #
 # This program calculates the numerical rank, probability, and name of a poker hand.
@@ -146,13 +146,13 @@ handRankProbabilityList = [0.000154, 0.00139, 0.0240, 0.1441, 0.1965, 0.3925, 2.
 file1 = open("pokerHand.txt", "r")
 fileLine = file1.readline()
 card1 = CreateCardFromText(fileLine)
-fileLine = file.readline()
+fileLine = file1.readline()
 card2 = CreateCardFromText(fileLine)
-fileLine = file.readline()
+fileLine = file1.readline()
 card3 = CreateCardFromText(fileLine)
-fileLine = file.readline()
+fileLine = file1.readline()
 card4 = CreateCardFromText(fileLine)
-fileLine = file.readline()
+fileLine = file1.readline()
 card5 = CreateCardFromText(fileLine)
 
 # Sample hand, used for testing
