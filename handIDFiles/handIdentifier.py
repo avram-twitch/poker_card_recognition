@@ -6,6 +6,7 @@
 #
 # This program calculates the numerical rank, probability, and name of a poker hand.
 
+
 handName = ""
 handRank = 10;
 handProbability = 0.1
@@ -95,6 +96,14 @@ def CalculateHandProbability(handRank):
     index = handRank-1
     return handRankProbabilityList[index]
 
+# Returns a card tuple from a given string. 
+# Strings must be formatted to have two digits for the rank (e.g. 03, 12, 04), a comma, then a single digit for the suit.
+def CreateCardFromText(stringData):
+    rank = int(stringData[0] + stringData[1]) 
+    suit = int(stringData[3])
+    card = (rank,suit)
+    return card
+
 # Card Rank Table
 # 2
 # 3
@@ -133,13 +142,25 @@ handNameList = ["Royal Flush", "Straight Flush", "Four Of A Kind", "Full House",
                     "Three Of A Kind", "Two Pair", "Pair"]
 handRankProbabilityList = [0.000154, 0.00139, 0.0240, 0.1441, 0.1965, 0.3925, 2.1128, 4.7539, 42.2569, 50.1177]
 
+#Read the cards in from the input file.
+file = open("pokerHand.txt", "r")
+fileLine = file.readline()
+card1 = CreateCardFromText(fileLine)
+fileLine = file.readline()
+card2 = CreateCardFromText(fileLine)
+fileLine = file.readline()
+card3 = CreateCardFromText(fileLine)
+fileLine = file.readline()
+card4 = CreateCardFromText(fileLine)
+fileLine = file.readline()
+card5 = CreateCardFromText(fileLine)
 
 # Sample hand, used for testing
-card1 = (9, 0)
-card2 = (13, 0)
-card3 = (12, 0)
-card4 = (11, 0)
-card5 = (10, 3)
+#card1 = (9, 0)
+#card2 = (13, 0)
+#card3 = (12, 0)
+#card4 = (11, 0)
+#card5 = (10, 3)
 
 # Add the cards to the hand and sort the hand from the highest ranked card to the lowest.
 hand = [card1, card2, card3, card4, card5]
