@@ -92,9 +92,11 @@ def create_csv(output_file, xml_directory, mapper_file):
         if label is None:
             continue
 
+        jpg_filename = filename.replace("xml", "jpg")
+
         for box in read_xml(fp):
             row = [
-                filename,
+                jpg_filename,
                 box['width'],
                 box['height'],
                 label,
@@ -112,6 +114,6 @@ def create_csv(output_file, xml_directory, mapper_file):
 
 if __name__=='__main__':
     xml_directory = "./labeled_jpgs/"
-    mapper_file = _get_mapper("./labels.txt")
+    mapper_file = "./labels.txt"
     output_file = "./data.csv"
     create_csv(output_file, xml_directory, mapper_file)
